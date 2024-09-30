@@ -1,15 +1,16 @@
-package com.tecnologia.service.domain;
+package com.tecnologia.service.adapters.out.persistence;
 
-public class Tecnologia {
+import org.springframework.data.annotation.Id;
+import org.springframework.data.relational.core.mapping.Table;
 
+@Table("tecnologias")
+public class TecnologiaEntity {
+    @Id
     private Long id;
     private String nombre;
     private String descripcion;
 
-    public Tecnologia() {
-    }
-
-    public Tecnologia(Long id, String nombre, String descripcion) {
+    public TecnologiaEntity(Long id, String nombre, String descripcion) {
         this.id = id;
         this.nombre = nombre;
         this.descripcion = descripcion;
